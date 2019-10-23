@@ -1,26 +1,35 @@
 module top;
-    bit pclk;
-   always #10 pclk = ~pclk;
-
-   bus_if   _if (pclk);
-
-   traffic  pB0 ( .pclk    (_if.pclk),
-                  .presetn (_if.presetn),
-                  .paddr   (_if.paddr),
-                  .pwdata  (_if.pwdata),
-                  .prdata  (_if.prdata),
-                  .psel    (_if.psel),
-                  .pwrite  (_if.pwrite),
-                  .penable (_if.penable));
-
-   initial begin 
-      uvm_config_db #(virtual bus_if)::set (null, "uvm_test_top.*", "bus_if", _if);
-     run_test ("reg_rw_test");
-   end
+  import uvm_pkg::*;
+  import my_pkg::*;
   
-  initial begin
-    $dumpvars;
-    $dumpfile("dump.vcd");
-  end
+  bit pclk;
+  
+  always #10 pclk = ~pclk;
 
+  apb_if   apb_if (pclk);
+
+  traffic  pB0 (.pclk    (apb_if.pclk),
+                .presetn (apb_if.presetn),
+                .paddr   (apb_if.paddr),
+                .pwdata  (apb_if.pwdata),
+                .prdata  (apb_if.prdata),
+                .psel    (apb_if.psel),
+                .pwrite  (apb_if.pwrite),
+                .penable (apb_if.penable));
+
+  initial begin 
+    `ifdef XCELIUM
+       $recordvars();
+    `endif
+    `ifdef VCS
+       $vcdpluson;
+    `endif
+    `ifdef QUESTA
+       $wlfdumpvars();
+       set_config_int("*", "recording_detail", 1);
+    `endif
+    
+    uvm_config_db #(virtual apb_if)::set (null, "uvm_test_top.*", "apb_if", apb_if);
+    run_test ("reg_rw_test");
+  end
 endmodule

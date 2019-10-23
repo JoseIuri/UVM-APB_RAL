@@ -13,6 +13,6 @@ class reset_seq extends uvm_sequence;
       `uvm_info ("RESET", "Running reset ...", UVM_MEDIUM);
       vif.presetn <= 0;
       @(posedge vif.pclk) vif.presetn <= 1;
-      @ (posedge vif.pclk);
+      @(posedge vif.pclk);
    endtask
 endclass
