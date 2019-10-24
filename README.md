@@ -34,7 +34,7 @@ make
 
 * **José Iuri Barbosa de Brito** - [JoseIuri](https://github.com/JoseIuri)
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/JoseIuri/UVM-APB_RAL/contributors) who participated in this project.
 
 ## License
 
@@ -42,7 +42,7 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Contributing
 
-1. Fork it (<https://github.com/JoseIuri/Simple_UVM/fork>)
+1. Fork it (<https://github.com/JoseIuri/UVM-APB_RAL/fork>)
 2. Create your feature branch (`git checkout -b feature/fooBar`)
 3. Commit your changes (`git commit -am 'Add some fooBar'`)
 4. Push to the branch (`git push origin feature/fooBar`)
