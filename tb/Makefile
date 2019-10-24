@@ -1,6 +1,6 @@
 RTL_SRC = ../rtl/
 
-IF = apb_if.sv
+IF = ./apb_if.sv
 RTL = ../rtl/traffic.sv
 REFMOD = 
 PKGS = ./my_pkg.sv 
@@ -13,7 +13,7 @@ RUN_ARGS_COMMON = -access +r -input shm.tcl \
           +uvm_set_config_int=*,recording_detail,1 -coverage all -covoverwrite
 
 sim:
-	@xrun -64bit -uvm  +incdir+$(RTL_SRC) $(PKGS) $(IF) $(RTL) top.sv \
+	@xrun -64bit -uvm  +incdir+$(RTL_SRC) $(IF) $(PKGS) $(RTL) top.sv \
 	+UVM_TESTNAME=reg_rw_test -covtest reg_rw_test-$(SEED) -svseed $(SEED)  \
 	-defparam top.min_cover=$(COVER) -defparam top.min_transa=$(TRANSA) $(RUN_ARGS_COMMON) $(RUN_ARGS)
 

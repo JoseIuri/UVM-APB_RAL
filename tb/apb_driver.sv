@@ -2,7 +2,7 @@ class apb_driver extends uvm_driver #(apb_tr);
    `uvm_component_utils (apb_driver)
  
    apb_tr  tr;
-   virtual abp_if    vif;
+   virtual apb_if    vif;
  
    function new (string name = "apb_driver", uvm_component parent);
       super.new (name, parent);
@@ -10,7 +10,7 @@ class apb_driver extends uvm_driver #(apb_tr);
  
    virtual function void build_phase (uvm_phase phase);
       super.build_phase (phase);
-      if (! uvm_config_db#(virtual abp_if)::get (this, "*", "abp_if", vif))
+      if (! uvm_config_db#(virtual apb_if)::get (this, "*", "apb_if", vif))
          `uvm_error ("DRVR", "Did not get bus if handle")
    endfunction
  

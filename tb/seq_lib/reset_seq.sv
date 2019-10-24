@@ -4,10 +4,10 @@ class reset_seq extends uvm_sequence;
       super.new (name);
    endfunction
 
-   virtual bus_if    vif; 
+   virtual apb_if    vif; 
 
    task body ();
-      if (!uvm_config_db #(virtual bus_if) :: get (null, "uvm_test_top.*", "bus_if", vif)) 
+      if (!uvm_config_db #(virtual apb_if) :: get (null, "uvm_test_top.*", "apb_if", vif)) 
          `uvm_fatal ("VIF", "No vif")
 
       `uvm_info ("RESET", "Running reset ...", UVM_MEDIUM);

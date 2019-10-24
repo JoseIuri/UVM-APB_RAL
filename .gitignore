@@ -7,9 +7,10 @@ core.*
 *.diff
 
 #Waves and constructs
-cov_work/*
+*cov_work/*
 *.trn
 *.shm
+*.dsn
 
 # ius results are not for the vc
 irun.log

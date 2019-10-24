@@ -5,12 +5,12 @@ class apb_monitor extends uvm_monitor;
    endfunction
  
    uvm_analysis_port #(apb_tr)  mon_ap;
-   virtual bus_if                vif;
+   virtual apb_if                vif;
  
    virtual function void build_phase (uvm_phase phase);
       super.build_phase (phase);
       mon_ap = new ("mon_ap", this);
-      uvm_config_db #(virtual bus_if)::get (null, "uvm_test_top.*", "bus_if", vif);
+      uvm_config_db #(virtual apb_if)::get (null, "uvm_test_top.*", "apb_if", vif);
    endfunction
  
    virtual task run_phase (uvm_phase phase);
