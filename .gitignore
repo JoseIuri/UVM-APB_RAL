@@ -6,6 +6,10 @@ core.*
 *.tar.gz
 *.diff
 
+#Waves and constructs
+cov_work/*
+*.trn
+*.shm
 
 # ius results are not for the vc
 irun.log
