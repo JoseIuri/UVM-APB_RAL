@@ -10,7 +10,7 @@ import uvm_pkg::*;
 `include "./reg_lib/ral_cfg_timer.sv"
 `include "./reg_lib/ral_cfg_ctl.sv"
 `include "./reg_lib/ral_block_traffic_cfg.sv"
-`include "./reg_lib/ral_sys_traffic.sv"
+//`include "./reg_lib/ral_sys_traffic.sv"
 
 `include "reg2apb_adapter.sv"
 
