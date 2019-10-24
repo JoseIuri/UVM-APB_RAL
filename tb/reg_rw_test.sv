@@ -11,7 +11,7 @@ class reg_rw_test extends base_test;
 
       phase.raise_objection(this);
 
-      m_env.m_reg_env.set_report_verbosity_level (UVM_HIGH);
+      m_env.set_report_verbosity_level (UVM_HIGH);
       uvm_config_db#(ral_sys_traffic)::get(null, "uvm_test_top", "m_ral_model", m_ral_model);
       m_ral_model.cfg.timer[1].write (status, 32'hcafe_feed);
       m_ral_model.cfg.timer[1].read (status, rdata);

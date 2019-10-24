@@ -18,14 +18,14 @@ class apb_monitor extends uvm_monitor;
          forever begin
             @(posedge vif.pclk);
             if (vif.psel & vif.penable & vif.presetn) begin
-               apb_tr pkt = apb_tr::type_id::create ("pkt");
-               pkt.addr = vif.paddr;
+               apb_tr tr = apb_tr::type_id::create ("tr");
+               tr.addr = vif.paddr;
                if (vif.pwrite)
-                  pkt.data = vif.pwdata;
+                  tr.data = vif.pwdata;
                else
-                  pkt.data = vif.prdata;
-               pkt.write = vif.pwrite;
-               mon_ap.write (pkt);
+                  tr.data = vif.prdata;
+               tr.write = vif.pwrite;
+               mon_ap.write (tr);
             end 
          end
       join_none

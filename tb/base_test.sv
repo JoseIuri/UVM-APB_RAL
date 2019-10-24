@@ -1,7 +1,7 @@
 class base_test extends uvm_test;
    `uvm_component_utils (base_test)
 
-   traffic_env         m_env;
+   traffic_env    m_env;
    my_sequence    m_seq;
    reset_seq      m_reset_seq;
    uvm_status_e   status;

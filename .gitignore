@@ -12,6 +12,8 @@ irun.log
 INCA_libs
 .simvision
 irun.key
+xcelium*
+*xrun*
 
 # created by flow
 *.fails

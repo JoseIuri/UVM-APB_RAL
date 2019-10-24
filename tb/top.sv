@@ -2,6 +2,8 @@ module top;
   import uvm_pkg::*;
   import my_pkg::*;
   
+  parameter min_cover = 70;
+  parameter min_transa = 2000;
   bit pclk;
   
   always #10 pclk = ~pclk;
