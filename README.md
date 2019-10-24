@@ -1,2 +1,61 @@
-# UVM-AXI4Lite_RAL
-This repository contains an example of the use of UVM Register Abstraction Layer in a verification of a simple AXI4Lite DUT.
+# UVM APB Register Abstraction Layer
+
+## Table of Contents
+
+- [Getting Started](#getting-started)
+- [Prerequisites](#prerequisites)
+- [Running the tests](#running-the-tests)
+- [Authors](#authors)
+- [License](#license)
+- [Contributing](#contributing)
+- [Acknowledgments](#acknowledgments)
+
+## Getting Started
+
+This repository contains an example of the use of UVM Register Abstraction Layer in a verification of a simple APB based DUT.
+
+### Prerequisites
+
+```
+UVM 1.2
+
+Cadence xrun(64): 18.09-s011
+```
+
+## Running the tests
+
+To run the simulation just do the make command.
+
+```
+make
+```
+
+## Authors
+
+* **José Iuri Barbosa de Brito** - [JoseIuri](https://github.com/JoseIuri)
+
+See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+
+## Contributing
+
+1. Fork it (<https://github.com/JoseIuri/Simple_UVM/fork>)
+2. Create your feature branch (`git checkout -b feature/fooBar`)
+3. Commit your changes (`git commit -am 'Add some fooBar'`)
+4. Push to the branch (`git push origin feature/fooBar`)
+5. Create a new Pull Request
+
+## Acknowledgments
+
+* XMEN Lab - Federal University of Campina Grande - Brazil
+
+<p align="center">
+  <a href="https://www.embedded.ufcg.edu.br/">
+    <img alt="XMEN Lab" title="XMEN Lab" src="https://i.imgur.com/IzbZM0E.png" width="200">
+  </a>
+</p>
+
+
