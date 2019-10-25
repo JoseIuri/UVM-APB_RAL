@@ -1,8 +1,5 @@
 class apb_agent extends uvm_agent;
    `uvm_component_utils (apb_agent)
-   function new (string name="apb_agent", uvm_component parent);
-      super.new (name, parent);
-   endfunction
 
    uvm_analysis_port #(apb_tr) ag_ap;
 
@@ -10,6 +7,11 @@ class apb_agent extends uvm_agent;
    apb_monitor                 m_mon;
    reg2apb_adapter             reg2apb;
    uvm_sequencer #(apb_tr)     m_seqr; 
+   
+   function new (string name="apb_agent", uvm_component parent);
+      super.new (name, parent);
+      ag_ap = new("ag_ap", this);
+   endfunction
 
    virtual function void build_phase (uvm_phase phase);
       super.build_phase (phase);

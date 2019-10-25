@@ -14,12 +14,13 @@ import uvm_pkg::*;
 
 `include "reg2apb_adapter.sv"
 
-`include "./seq_lib/reset_seq.sv"
+//`include "./seq_lib/reset_seq.sv"
 `include "./seq_lib/my_sequence.sv"
 
 `include "apb_monitor.sv"
 `include "apb_driver.sv"
 `include "apb_agent.sv"
+`include "traffic_scoreboard.sv"
 `include "traffic_env.sv"
 
 `include "base_test.sv"

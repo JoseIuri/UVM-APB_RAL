@@ -5,10 +5,16 @@ module top;
   parameter min_cover = 70;
   parameter min_transa = 2000;
   bit pclk;
+  bit presetn;
   
   always #10 pclk = ~pclk;
 
-  apb_if   apb_if (pclk);
+  initial begin
+    presetn = 0;
+    #10 presetn = 1;
+  end
+
+  apb_if   apb_if (pclk, presetn);
 
   traffic  pB0 (.pclk    (apb_if.pclk),
                 .presetn (apb_if.presetn),

@@ -1,4 +1,4 @@
-class my_sequence extends uvm_reg_sequence;
+class my_sequence extends uvm_reg_sequence();
    `uvm_object_utils (my_sequence)
    function new (string name = "my_sequence");
       super.new (name);
@@ -17,7 +17,7 @@ class my_sequence extends uvm_reg_sequence;
       write_reg(m_ral_model.ctrl, status, 32'd3);
       write_reg(m_ral_model.timer[0], status, 32'b00000010000000000000100000000001);
       write_reg(m_ral_model.timer[1], status, 32'd0);
-      read_reg(m_ral_model.timer[1],, status, rdata );
+      read_reg(m_ral_model.timer[1], status, rdata );
    
    endtask
 endclass

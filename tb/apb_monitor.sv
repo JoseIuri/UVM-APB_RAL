@@ -16,6 +16,7 @@ class apb_monitor extends uvm_monitor;
    virtual task run_phase (uvm_phase phase);
       fork
          forever begin
+            @(posedge vif.presetn);
             @(posedge vif.pclk);
             if (vif.psel & vif.penable & vif.presetn) begin
                apb_tr tr = apb_tr::type_id::create ("tr");
