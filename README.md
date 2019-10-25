@@ -14,6 +14,8 @@
 
 This repository contains an example of the use of UVM Register Abstraction Layer in a verification of a simple APB based DUT.
 
+![](UVM(2) (4).png)
+
 ### Prerequisites
 
 ```
