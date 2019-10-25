@@ -33,6 +33,10 @@ class traffic_env extends uvm_env;
       m_apb2reg_predictor.adapter   = m_agent.m_reg2apb;
       m_agent.m_mon.mon_ap.connect (m_apb2reg_predictor.bus_in);
       m_ral_model.default_map.set_sequencer(m_agent.m_seqr, m_agent.m_reg2apb);
+      m_ral_model.default_map.set_auto_predict(0);
+
+      m_scoreboard.m_ral_model = m_ral_model;
+      m_agent.m_mon.mon_ap.connect (m_scoreboard.apb_export);
    endfunction
 
 endclass
