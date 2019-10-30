@@ -14,7 +14,11 @@
 
 This repository contains an example of the use of UVM Register Abstraction Layer in a verification of a simple APB based DUT.
 
-![](tb.png)
+<p align="center">
+  <a href="">
+    <img alt="Testbench Architecture" title="XMEN Lab" src="https://github.com/JoseIuri/UVM-APB_RAL/blob/master/tp.png?raw=true" width="700">
+  </a>
+</p>
 
 ### Prerequisites
 
