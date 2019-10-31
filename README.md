@@ -56,6 +56,8 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Acknowledgments
 
+* **Dr. Christoph Sühnel** - [chrsue](https://github.com/chrsue) - [Website](https://www.christoph-suehnel.de)
+
 * XMEN Lab - Federal University of Campina Grande - Brazil
 
 <p align="center">
