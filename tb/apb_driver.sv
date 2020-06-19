@@ -23,7 +23,7 @@ class apb_driver extends uvm_driver #(apb_tr);
       vif.paddr <= 0;
       vif.pwdata <= 0;
       forever begin
-         @(posedge vif.presetn);
+         @(posedge vif.pclk);
          seq_item_port.get_next_item (tr);
          if (tr.write)
             write (tr.addr, tr.data);
